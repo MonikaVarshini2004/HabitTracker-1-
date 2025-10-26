@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Track & Crack Your Habit</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>Track & Crack Your Habit</h1>
+    <div class="header-buttons">
+      <button id="themeToggle" class="theme-btn">🌗 Toggle Mode</button>
+      <button id="profileBtn" class="profile-btn">
+        <img src="https://r2.erweima.ai/imgcompressed/compressed_9f55cc317f1a171bd923421db8408966.webp" alt="Profile" />
+      </button>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <div class="habit-header">
+      <h2>Your Habits</h2>
+      <button id="addHabitBtn" class="add-btn">+ Add Habit</button>
+    </div>
+    <ul id="habitList" class="habit-list"></ul>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h2 id="modalTitle">Add New Habit</h2>
+      <input id="habitTitle" type="text" placeholder="Habit Title" />
+      <textarea id="habitDesc" placeholder="Habit Description"></textarea>
+      <input id="habitAim" type="text" placeholder="Habit Aim" />
+      <input id="habitDate" type="date" />
+      <select id="habitFreq">
+        <option value="daily">Daily</option>
+        <option value="weekly">Weekly</option>
+        <option value="custom">Custom</option>
+      </select>
+
+      <div class="modal-buttons">
+        <button id="cancelBtn" class="cancel-btn">Cancel</button>
+        <button id="saveBtn" class="save-btn">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom right, #669BF8, #F4CFF5);
+  color: #252044;
+  min-height: 100vh;
+  transition: all 0.5s ease;
+  padding: 1rem;
+}
+
+/* Dark Mode */
+body.dark {
+  background: linear-gradient(to bottom right, #1e1b4b, #AD8CEB);
+  color: #C6DCF9;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-btn {
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.theme-btn:hover {
+  background: #3730a3;
+}
+
+.profile-btn {
+  background: #6366f1;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile-btn img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+/* Habit Section */
+main {
+  padding: 1rem;
+}
+
+.habit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.add-btn {
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background: #3730a3;
+}
+
+/* Habit Cards */
+.habit-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.habit-list li {
+  background: #fff;
+  color: #252044;
+  border-radius: 16px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
+body.dark .habit-list li {
+  background: #2d2a4a;
+  color: #C6DCF9;
+}
+
+.habit-list li:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.habit-list button {
+  border: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.done-btn { background: #16a34a; }
+.done-btn:hover { background: #15803d; }
+
+.skip-btn { background: #eab308; }
+.skip-btn:hover { background: #ca8a04; }
+
+.miss-btn { background: #dc2626; }
+.miss-btn:hover { background: #b91c1c; }
+
+.edit-btn { background: #3b82f6; }
+.edit-btn:hover { background: #2563eb; }
+
+.delete-btn { background: #6b7280; }
+.delete-btn:hover { background: #4b5563; }
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.modal.flex {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  color: #252044;
+  padding: 1.5rem;
+  border-radius: 16px;
+  width: 360px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+body.dark .modal-content {
+  background: #2d2a4a;
+  color: #C6DCF9;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+  width: 100%;
+  margin-bottom: 0.7rem;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+}
+
+.cancel-btn {
+  background: #9ca3af;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background: #6b7280;
+}
+
+.save-btn {
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background: #3730a3;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
